@@ -15,12 +15,13 @@ body {
 
 button {
     font-family: "Overpass";
+    cursor: pointer;
 }
 
 .container {
     background-color: hsl(213, 19%, 18%);
     background: linear-gradient(hsl(213, 19%, 18%), hsl(212, 19%, 14%));
-    width: 280px;
+    width: 270px;
     padding: 25px;
     border-radius: 20px;
     display: flex;
@@ -48,13 +49,13 @@ button {
     line-height: 1.6;
 }
 
-.ratting-buttons-wrapper {
+.rating-buttons-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.ratting-button {
+.rating-button {
     height: 40px;
     width: 40px;
     color: hsl(217, 12%, 63%);
@@ -62,6 +63,11 @@ button {
     border: 0px;
     border-radius: 40px;
     font-weight: bold;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
 }
 
 .submit-button {
@@ -75,12 +81,42 @@ button {
     border: solid 2px black;
 }
 
+.selected {
+    background-color: hsl(25, 97%, 53%);
+    color: black;
+}
+
+#selected-rating-section {
+    display: none;
+    align-items: center;
+}
+
+.user-selected-rating-container {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    border-radius: 20px;
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(217, 12%, 63%, 0.15);
+    font-size: 0.75rem;
+    padding: 5px 15px;
+    font-weight: 200;
+}
+
+.rating-text-img {
+    height: 90px;
+}
+
+.thank-for-rating-text {
+    text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     * {
         font-size: calc(100% + 2px);
     }
 
-    .ratting-button {
+    .rating-button {
         font-size: 16px;
     }
 

@@ -15,7 +15,8 @@
 </head>
 
 <body>
-  <div class="container">
+  <script src="rate.js"></script>
+  <div id="rating-section" class="container">
     <img class="component-icon" src="/images/icon-star.svg" />
 
     <div>
@@ -27,22 +28,34 @@
       </div>
     </div>
 
-    <div class="ratting-buttons-wrapper">
-      <button class="ratting-button">1</button>
-      <button class="ratting-button">2</button>
-      <button class="ratting-button">3</button>
-      <button class="ratting-button">4</button>
-      <button class="ratting-button">5</button>
+    <div class="rating-buttons-wrapper">
+      <button class="rating-button" onclick="handleRating(event)">1</button>
+      <button class="rating-button" onclick="handleRating(event)">2</button>
+      <button class="rating-button" onclick="handleRating(event)">3</button>
+      <button class="rating-button" onclick="handleRating(event)">4</button>
+      <button class="rating-button" onclick="handleRating(event)">5</button>
     </div>
 
-    <button class="submit-button"> Submit </button>
+    <button class="submit-button" onclick="onSubmit()"> Submit </button>
+  </div>
+  <div id="selected-rating-section" class="container">
+    <img src="images/illustration-thank-you.svg" class="rating-text-img"/>
+    <div class="user-selected-rating-container">
+      You selected <div id="selected-rating"></div> out of 5
+    </div>
 
-    <!-- You selected ?? out of 5
+    <div class="header">
+      Thank you!
+    </div>
 
-    Thank you!
+    <div class="text thank-for-rating-text">
+      We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!
+    </div>
+  </div>
+  <div>
 
-    We appreciate you taking the time to give a rating. If you ever need more support,
-    don’t hesitate to get in touch! -->
+  </div>
 </body>
 
 </html>
